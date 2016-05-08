@@ -1,0 +1,21 @@
+<ion-view view-title="My Games">
+  <ion-content class="stable-bg">
+
+    <div class="padding">
+      <button class="button button-royal" ng-click="vm.openCamera()">Camera</button>
+      <button class="button button-royal" ng-click="vm.check()">facebook avilable</button>
+    </div>
+    <div class="row light-bg padding-horizontal">
+      <div class="col-60 padding row row-center">
+        <h5 class="no-margin">TOTAL POINTS EARNED</h5>
+      </div>
+      <div class="col-40 padding">
+        <h3 class="no-margin text-center assertive">408</h3>
+      </div>
+    </div>
+
+    <div class="margin-top light-bg list">
+      <game-item ng-repeat="game in vm.games" game="game" type="1"></game-item>
+    </div>
+  </ion-content>
+</ion-view>

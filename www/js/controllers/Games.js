@@ -1,0 +1,19 @@
+(function(){
+  angular.module('app')
+    .controller('GamesController',function(Game,$cordovaInAppBrowser,$cordovaAppAvailability){
+      this.games=Game.query();
+      this.openCamera=function(){
+        $cordovaInAppBrowser.open('http://qq.com','_blank');
+      };
+
+      this.check=function(){
+        $cordovaAppAvailability.check('com.facebook.katana')
+        .then(()=>{
+          alert('可用')
+        })
+        .catch(()=>{
+          alert('不可用')
+        });
+      }
+    });
+})();

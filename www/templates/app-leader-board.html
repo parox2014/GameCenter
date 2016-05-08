@@ -1,0 +1,21 @@
+<ion-view view-title="Leader Board">
+  <ion-content>
+    <div class="card list">
+      <div class="item item-divider-android">
+        <h2>{{vm.game.name}}</h2>
+      </div>
+      <div class="item item-avatar item-leader-board" ng-repeat="lb in vm.game.leaderBoard">
+        <img ng-src="{{lb.avatar}}">
+
+        <h2>{{lb.nickname}}</h2>
+        <p>parox@google.com</p>
+        <span class="badge" ng-class="{'badge-positive':$index<3,'badge-stable':$index>=3}">{{$index+1}}</span>
+        <span class="score">{{lb.scores}}</span>
+      </div>
+
+      <div class="item">
+        <button class="button button-block button-positive">Play</button>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

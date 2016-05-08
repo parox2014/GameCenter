@@ -476,6 +476,13 @@ button.item.item-button-right {
   padding-left: $item-avatar-width + ($item-padding * 2);
   min-height: $item-avatar-width + ($item-padding * 2);
 
+  .badge{
+    top:27px;
+  }
+
+  .button{
+    top:21px;
+  }
   > img:first-child,
   .item-image {
     position: absolute;

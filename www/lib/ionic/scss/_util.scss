@@ -267,6 +267,10 @@
   border-color: $button-dark-border;
 }
 
+.gray,a.gray{
+  color:$gray;
+}
+
 [collection-repeat] {
   /* Position is set by transforms */
   left: 0 !important;

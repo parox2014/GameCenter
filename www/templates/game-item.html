@@ -1,0 +1,20 @@
+<div class="row game-item light-border" ng-if="vm.type==1">
+  <div class="col-66">
+    <h5 ng-bind="vm.game.name"></h5>
+    <p class="gray no-margin">Current Scores:  <span ng-bind="vm.game.scores"></span></p>
+    <p class="gray no-margin">Points Earned:  <span ng-bind="vm.game.points"></span></p>
+  </div>
+
+  <div class="col-34">
+    <button class="button button-block button-positive button-small">Play</button>
+
+    <button class="button button-block button-positive button-outline button-small"
+            ui-sref="app.leader-board({gameId:vm.game.id})">
+      Leader Board
+    </button>
+  </div>
+</div>
+<div class="item item-button-right" ng-if="vm.type==2">
+  <h2>{{vm.game.name}}<span class="gray">(category)</span></h2>
+  <button class="button button-icon"><i class="ion ion-ios-download"></i></button>
+</div>
